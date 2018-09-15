@@ -261,6 +261,7 @@ public class ListActivity extends AppCompatActivity {
         super.onResume();
 
         resourceManager = new ResourceManager(this);
+        // todo do we need this?
         HavenEventDB.getDatabase(this).getEventDAO().count().observe(this, eventCountObserver);
 
         if (modifyPos != -1) {
